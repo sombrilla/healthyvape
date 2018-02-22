@@ -1,0 +1,101 @@
+body{
+	background-image: url(imagenes/background.jpg);
+}
+
+
+/*********************************
+Productos featured en la landing
+*********************************/
+
+#mod{
+	top:55%;
+	left: 26%;
+	
+}
+
+#tank{
+	top:30%;
+	left: 32%;
+	animation-delay: .5s;
+}
+
+
+.product p, .product a{
+	margin:0;
+	padding:10px 0 10px 0;
+	background-color: rgba(255,255,255,0.8);
+	width:50%;
+	display:inline-block;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2) inset;
+}
+
+.product a{
+	background-color: rgba(165, 96, 96,0.8);
+	transition:background-color .2s ease;
+	border-radius:0 0 5px 0;
+	font-weight:bold;
+}
+
+.product p{
+	
+	border-radius:0 0 0 5px;
+}
+
+.product a:hover{
+	background-color: rgba(200, 96, 96,0.8);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/*Flecha*/
+
+.product{
+	border:2px solid white;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.2) inset;
+	background-color: rgba(255,255,255,0.5);
+	box-sizing:border-box;
+	width: 33vw;
+	text-align:center;
+	position:fixed;
+	animation: fadeIn .5s ease-in both;
+	border-radius: 5px;
+}
+
+
+.product:after, .product:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.product:after{
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: rgba(255,255,255,0.5);
+	border-width: 50px;
+	margin-top: -50px;
+}
+
+.product:before{
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color:  rgba(255,255,255,1);
+	border-width: 56px;
+	margin-top: -56px;
+}
+
+#footer{
+	border-top: 2px solid rgb(165, 96, 96);
+}

@@ -1,0 +1,483 @@
+body{
+	font-family: 'Ubuntu', sans-serif;
+	padding:0;
+	margin:0;
+	background-image: url(imagenes/bg2.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	text-align:center;
+    position: relative;
+	width: 100%;
+	transition:background-image 1s linear;
+}
+
+ul{
+	list-style-type: none;
+}
+
+/*********************************
+Navegacion y logo
+*********************************/
+
+#logo{
+	background-image: url(logo.png);
+	background-position: bottom center;
+	transform:scale(.9);
+	transform-origin: center;
+	display:inline-block;
+	width: 386px;
+	height: 244px;
+	background-repeat: no-repeat;
+	transition: all .2s ease;
+}
+
+#logo:hover{
+	transform:scale(1);
+}
+
+
+#logoAd{
+	background-image: url(logoAd.png);
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+	position:fixed;
+	top:65%;
+	left:70%;
+}
+
+h1{
+	margin: 0;
+	display:none;
+}
+
+a{
+	text-decoration:none;
+	color:white;
+}
+
+#nav{
+	z-index:1;
+	list-style:none;
+	float:left;
+	padding:0;
+	position: fixed;
+	top:30%;
+	text-align:left;
+}
+
+#nav li a{
+	background: url(icons/home.png) no-repeat 5% center, rgba(100,100,100,0.9);
+	margin-bottom: 10px;
+	display:inline-block;
+	width:100px;
+	padding:15px 5px 15px 30px;
+	transition:background-color 0.2s ease;
+	font-size:18px;
+	border-radius: 0 5px 5px 0;
+	border: 1px rgba(200,200,200,.9) solid;
+	border-left:0;
+}
+
+#nav li:nth-child(2) a{
+	background: url(icons/productos.png) no-repeat 5% center, rgba(100,100,100,0.8);
+}
+
+#nav li:nth-child(3) a{
+	background: url(icons/nosotros.png) no-repeat 5% center, rgba(100,100,100,0.7);
+}
+
+#nav li:nth-child(4) a{
+	background: url(icons/contacto.png) no-repeat 5% center, rgba(100,100,100,0.6);
+}
+
+#nav li:nth-child(5) a{
+	background: url(icons/mapa.png) no-repeat 5% center, rgba(100,100,100,0.5);
+}
+
+
+#nav li a:hover{
+	background-color: rgba(180,180,180,0.7);
+}
+
+
+#nav .active{
+	background-color: rgba(180,180,180,0.7) !important;
+}
+
+
+/*********************************
+Productos
+*********************************/
+/*
+#container{
+	margin-left:7%;
+}
+*/
+.productos h2{
+	margin:0 auto;
+	padding: 1%;
+	box-sizing:border-box;
+	text-align:center;
+	background-color: rgba(234, 234, 234,.7);
+	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 6px rgba(0,0,0,.3);
+	width: 70%;
+	border-radius: 5px 5px 0 0;
+}
+
+.productos{
+	margin-top: 3%;
+	margin-bottom: 4%;
+}
+
+.productos ul {
+	margin:0 auto;
+	background-color: rgba(247, 247, 247,.9);
+	top: 30%;
+	text-align:center;
+	width: 70%;
+	box-shadow: 0 0 8px rgba(0,0,0,.5) inset;
+	box-shadow: 0 0 6px rgba(0,0,0,.3);
+	position:relative;
+	z-index:0;
+	padding:0;
+	border-radius:0 0 5px 5px;
+}
+
+.productos li{
+	display:inline-block;
+	margin: 2%;
+	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	width:200px;
+	overflow: hidden;
+	position:relative;
+}
+
+.overlay{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+	width: 100%; 
+	transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+.productos li:hover .overlay{
+	top: 0;
+}
+
+.overlay{
+	top: 100%;
+	bottom:40px;
+}
+
+.productos li img{
+	position:relative;
+	z-index:-1;
+}
+
+.precio, .comprar{
+	display:inline-block;
+	text-align:center;
+	padding: 10px;
+	margin:0;
+	box-sizing:border-box;
+	font-size:15px;
+}
+
+.precio{
+	width: 40%;
+	height:40px;
+	box-shadow: 0 0 6px rgba(0,0,0,.2) inset;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+
+.comprar{
+	width: 60%;
+	color: black;
+	height:40px;
+	background-color: #d9e0c6;
+	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	font-weight:bold;
+}
+
+.comprar:hover{
+	background-color: #d9efc6;
+}
+
+.nombre{
+	height:40px;
+	padding:5px;
+}
+
+.ribbon{
+	background-image:url(productos/new.png);
+	width:92px;
+	height:86px;
+	position:absolute;
+	
+}
+
+.featured{
+	background-image:url(productos/featured.png);
+	width:92px;
+	height:86px;
+	position:absolute;
+	
+}
+
+#tmini img{
+	text-align:center;
+	margin:0 auto;
+	height:300px;
+	overflow:hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/*********************************
+Filtro productos
+*********************************/
+
+#buscar{
+	margin: 0 auto;
+	background-color: rgba(247, 247, 247,.9);
+	text-align:center;
+	width: 70%;
+	overflow: hidden;
+	padding:0;
+	border-radius: 5px;
+	border:5px solid rgba(200, 200, 200,.5);
+	box-sizing:border-box;
+	box-shadow: 0 0 6px rgba(0,0,0,.3);
+}
+
+#buscar li{
+	float:left;
+	width:33.333%;
+}
+
+#buscar li a{
+	display: block;
+    color: grey;
+	font-weight:bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	box-shadow: 0 0 3px rgba(0,0,0,.5) inset;
+	transition:all .3s ease;
+}
+
+#buscar li a:hover {
+    background-color: rgba(255, 255, 255,.7);
+	box-shadow: 0 0 6px rgba(0,0,0,.5) inset;
+}
+
+
+
+
+.foto{
+	border-radius: 50%;
+	width:17%;
+}
+
+#nosotros hr{
+	border: 0; 
+	height: 1px; 
+	margin: 3% 0 3% 0;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#nosotros>div>img{
+	float:right;
+	margin: 30px 15px 15px 45px;
+	width: 30%;
+	border-radius: 5px;
+	border: 1px solid #000000;
+}
+
+#quotes{
+	width:75%;
+	margin: 0 auto;
+}
+
+#quotes>div{
+	width:100%;
+	box-shadow: 0 0 6px rgba(0,0,0,.5) inset;
+	padding: 15px;
+	box-sizing:border-box;
+}
+
+blockquote{
+  display:inline-block;
+  vertical-align:top;
+  background: #fff;
+  width: 50%;
+  padding: 15px 20px 15px 45px;
+  position: relative;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+  border-left: 15px solid #8eafe5;
+  border-right: 2px solid #8eafe5;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote::before{
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  content: "";
+}
+
+/*********************************
+Ubicacion
+*********************************/
+
+#mapa>div>div{
+	width:49%;
+	display:inline-block;
+	text-align:left;
+	vertical-align: top;
+	margin-bottom: 0;
+}
+
+#mapa img{
+	width:100%;
+}
+
+/*********************************
+Estilo containers
+*********************************/
+
+
+#mapa h2, #nosotros h2, #contacto h2{
+	margin:0 auto;
+	padding: 1%;
+	box-sizing:border-box;
+	text-align:center;
+	background-color: rgba(234, 234, 234,.7);
+	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 6px rgba(0,0,0,.3);
+	width: 70%;
+	border-radius: 5px 5px 0 0;
+}
+/*
+#mapa, #nosotros, #contacto{
+	margin-top: 3%;
+}
+*/
+
+#mapa>div,#nosotros>div, #contacto form{
+	margin:0 auto;
+	background-color: rgba(247, 247, 247,.9);
+	top: 30%;
+	box-sizing:border-box;
+	text-align:center;
+	width: 70%;
+	box-shadow: 0 0 8px rgba(0,0,0,.5) inset;
+	box-shadow: 0 0 6px rgba(0,0,0,.3);
+	position:relative;
+	z-index:0;
+	padding:15px;
+	border-radius:0 0 5px 5px;
+}
+
+#nosotros p{
+	text-align:justify;
+}
+
+#nosotros>div{
+	padding:30px;
+}
+
+#mapa div, #contacto, #nosotros div{
+	margin-bottom: 5%;
+}
+
+
+
+
+/*********************************
+Footer
+*********************************/
+
+#footer{
+	text-align:center;
+	font-size: 14px;
+	color: black;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	text-shadow: 1px 1px 2px #111;
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	clear: both;
+	z-index:0;
+	background: rgba(200,200,200,0.5);
+	border-top: 2px solid rgb(133, 174, 178);
+	box-sizing:border-box;
+}
+
+#footer div{
+	width:70%;
+	margin:0 auto;
+	padding: 0 15px 0 15px;
+	box-sizing:border-box;
+}
+
+#footer p{
+	display:inline-block;
+	width:49%;
+	box-sizing:border-box;
+}
+
+#footer p:nth-child(1){
+	line-height:20px;
+	text-align:left;
+}
+
+#footer p:nth-child(2){
+	margin-bottom:10px;
+	font-size:10px;
+	text-align:right;
+}
+
+#footer .fb, #footer .mail{
+	vertical-align:bottom;
+	width:20px;
+	height:20px;
+	display:inline-block;
+}
+
+#footer .fb{
+	background-image:url(imagenes/facebook-icon.png);
+	background-size: cover;
+}
+
+#footer .mail{
+	background-image:url(imagenes/Mail-icon.png);
+	background-size: cover;
+}
