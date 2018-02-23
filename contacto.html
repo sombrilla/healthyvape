@@ -30,7 +30,7 @@
 		<div id="contacto">
 			<h2>Contacto</h2>
 		
-			<form action="send.html" method="post" enctype="multipart/form-data">
+			<form action="send.php" method="post" enctype="multipart/form-data">
 				<div>
 					<div>
 						<span>*Nombre: </span>
@@ -59,13 +59,13 @@
 					<div>
 						<span>Como nos conociste?: </span>
 						<select>
-							<option value="na">No especificar</option>
-							<option value="busqueda">Internet(busqueda)</option>
-							<option value="publicidad">Internet(publicidad)</option>
-							<option value="foro">Internet(foro)</option>
-							<option value="amigo">Un amigo</option>
-							<option value="recomendacion">Me lo recomendaron</option>
-							<option value="otro">Otro</option>
+							<option value="na" name="donde">No especificar</option>
+							<option value="busqueda" name="donde">Internet(busqueda)</option>
+							<option value="publicidad" name="donde">Internet(publicidad)</option>
+							<option value="foro" name="donde">Internet(foro)</option>
+							<option value="amigo" name="donde">Un amigo</option>
+							<option value="recomendacion" name="donde">Me lo recomendaron</option>
+							<option value="otro" name="donde">Otro</option>
 						</select>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 				
 				
 				<div>
-					<input disabled="disabled" type="submit" value="Enviar"/>
+					<input type="submit" value="Enviar"/>
 				</div>
 			</form>
 		</div>

@@ -373,7 +373,7 @@ Estilo containers
 *********************************/
 
 
-#mapa h2, #nosotros h2, #contacto h2{
+#mapa h2, #nosotros h2, #contacto h2, #gracias h2{
 	margin:0 auto;
 	padding: 1%;
 	box-sizing:border-box;
@@ -390,7 +390,7 @@ Estilo containers
 }
 */
 
-#mapa>div,#nosotros>div, #contacto form{
+#mapa>div,#nosotros>div, #contacto form, #gracias div{
 	margin:0 auto;
 	background-color: rgba(247, 247, 247,.9);
 	top: 30%;
@@ -413,10 +413,24 @@ Estilo containers
 	padding:30px;
 }
 
-#mapa div, #contacto, #nosotros div{
+#mapa div, #contacto, #nosotros div, #gracias div{
 	margin-bottom: 5%;
 }
 
+#gracias div{
+	padding:20px 0 0 0;
+}
+
+#gracias a{
+	display:inline-block;
+	margin:0;
+	padding: 13px;
+	box-sizing:border-box;
+	width:100%;
+	background-color:rgba(165, 96, 96,0.8);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2) inset;
+	border-radius:0 0 5px 5px;
+}
 
 
 
