@@ -1,32 +1,108 @@
-body{
-	background-image: url(imagenes/background.jpg);
+html{
+	height:100%;
 }
 
+body{
+	background-image: url(imagenes/background.jpg);
+	height:100%;
+}
+
+#lay{
+    content:'';
+    position:absolute;	
+    left:0; top:0;
+    width:100%;
+	height:100%;
+    background:white;
+	animation:fadeOut 1s ease-out both;
+	transition:opacity .5s ease-out;
+}
+
+#lay.out{
+	animation:fade .2s linear both;
+}
+
+#logo{
+	background-image: url(logo.png);
+	background-position: center;
+	width: 386px;
+	height: 244px;
+}
+
+#nav li a{
+	background: url(icons/home0.png) no-repeat 80% center, rgba(165, 96, 96,0.8);
+	transition:all 0.2s ease;
+}
+
+#nav li:nth-child(2) a{
+	background: url(icons/productos0.png) no-repeat 80% center, rgba(165, 96, 96,0.7);
+}
+
+#nav li:nth-child(3) a{
+	background: url(icons/nosotros0.png) no-repeat 80% center, rgba(165, 96, 96,0.6);
+}
+
+#nav li:nth-child(4) a{
+	background: url(icons/contacto0.png) no-repeat 80% center, rgba(165, 96, 96,0.5);
+}
+
+#nav li:nth-child(5) a{
+	background: url(icons/mapa0.png) no-repeat 80% center, rgba(165, 96, 96,0.4);
+}
+
+#nav li:nth-child(1) .active, #nav li:nth-child(1) a:hover{
+	background: url(icons/home1.png) no-repeat 80% center;
+	background-color: rgba(200, 96, 96,0.8);
+}
+
+#nav li:nth-child(2) .active, #nav li:nth-child(2) a:hover{
+	background: url(icons/productos1.png) no-repeat 80% center;
+	background-color: rgba(200, 96, 96,0.8);
+}
+
+#nav li:nth-child(3) .active, #nav li:nth-child(3) a:hover{
+	background: url(icons/nosotros1.png) no-repeat 80% center;
+	background-color: rgba(200, 96, 96,0.8);
+}
+
+#nav li:nth-child(4) .active, #nav li:nth-child(4) a:hover{
+	background: url(icons/contacto1.png) no-repeat 80% center;
+	background-color: rgba(200, 96, 96,0.8);
+}
+
+#nav li:nth-child(5) .active, #nav li:nth-child(5) a:hover{
+	background: url(icons/mapa1.png) no-repeat 80% center;
+	background-color: rgba(200, 96, 96,0.8);
+}
+
+
+#nav .active{
+	background-color: rgba(200, 96, 96,0.8) !important;
+}
 
 /*********************************
 Productos featured en la landing
 *********************************/
 
 #mod{
-	top:55%;
-	left: 26%;
+	top:60%;
+	left: 28%;
 	
 }
 
 #tank{
-	top:30%;
-	left: 32%;
+	top:33%;
+	left: 33%;
 	animation-delay: .5s;
 }
 
 
 .product p, .product a{
 	margin:0;
-	padding:10px 0 10px 0;
-	background-color: rgba(255,255,255,0.8);
+	padding:5px 0 5px 0;
+	background-color: rgba(255,255,255,0.5);
 	width:50%;
 	display:inline-block;
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.2) inset;
 }
 
 .product a{
@@ -37,7 +113,8 @@ Productos featured en la landing
 }
 
 .product p{
-	
+	color:#80dd82;
+	font-weight:bold;
 	border-radius:0 0 0 5px;
 }
 
@@ -56,24 +133,43 @@ Productos featured en la landing
 	}
 }
 
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		display:hidden;
+	}
+}
+
 /*Flecha*/
 
 .product{
-	border:2px solid white;
-	box-shadow: 0px 0px 6px rgba(0,0,0,0.2) inset;
 	background-color: rgba(255,255,255,0.5);
 	box-sizing:border-box;
-	width: 33vw;
+	width: 28vw;
 	text-align:center;
 	position:fixed;
-	animation: fadeIn .5s ease-in both;
-	border-radius: 5px;
+	animation: fadeIn 1s ease-in both;
+	border-radius: 5px 0 5px 5px;
+	box-shadow: 0 0 8px rgba(0,0,0,.1);
+	
 }
 
 
 .product:after, .product:before {
 	left: 100%;
-	top: 50%;
+	top: 0%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -83,19 +179,31 @@ Productos featured en la landing
 }
 
 .product:after{
+	/*
 	border-color: rgba(255, 255, 255, 0);
 	border-left-color: rgba(255,255,255,0.5);
 	border-width: 50px;
 	margin-top: -50px;
+	*/
+	width: 0; 
+	height:0;
+	border-width: 100px 100px 0 0;
+	border-color: rgba(255,255,255,0.5) transparent transparent transparent;
 }
 
-.product:before{
-	border-color: rgba(255, 255, 255, 0);
-	border-left-color:  rgba(255,255,255,1);
-	border-width: 56px;
-	margin-top: -56px;
+.ui-dialog {
+	border:1px rgba(165, 96, 96,.4) solid !important;
+	border-bottom:5px rgb(165, 96, 96) solid !important;
+	border-top:5px rgb(165, 96, 96) solid !important;
 }
+
+#tmini #titleBar{
+	background-color:rgba(165, 96, 96,1);
+}
+
+
 
 #footer{
-	border-top: 2px solid rgb(165, 96, 96);
+	border:1px rgba(200, 96, 96,0.4) solid;
+	background: rgba(240,240,240,0.7);
 }

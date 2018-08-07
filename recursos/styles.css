@@ -2,7 +2,7 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 	padding:0;
 	margin:0;
-	background-image: url(imagenes/bg2.jpg);
+	background:rgb(247,249,251);
 	background-repeat: no-repeat;
     background-size: cover;
 	background-position: center;
@@ -10,7 +10,7 @@ body{
 	text-align:center;
     position: relative;
 	width: 100%;
-	transition:background-image 1s linear;
+	transition:all 1s linear;
 }
 
 ul{
@@ -22,19 +22,19 @@ Navegacion y logo
 *********************************/
 
 #logo{
-	background-image: url(logo.png);
-	background-position: bottom center;
-	transform:scale(.9);
+	background-image: url(logoS.png);
+	background-position: center center;
+	transform:scale(.7);
 	transform-origin: center;
 	display:inline-block;
-	width: 386px;
-	height: 244px;
+	width: 271px;
+	height: 190px;
 	background-repeat: no-repeat;
 	transition: all .2s ease;
 }
 
 #logo:hover{
-	transform:scale(1);
+	transform:scale(.8);
 }
 
 
@@ -64,47 +64,73 @@ a{
 	float:left;
 	padding:0;
 	position: fixed;
-	top:30%;
+	top:50%;
+	transform: translate(0, -50%); 
 	text-align:left;
 }
 
 #nav li a{
-	background: url(icons/home.png) no-repeat 5% center, rgba(100,100,100,0.9);
+	background: url(icons/home0.png) no-repeat 80% center, rgba(142, 175, 229,0.8);
 	margin-bottom: 10px;
 	display:inline-block;
-	width:100px;
-	padding:15px 5px 15px 30px;
-	transition:background-color 0.2s ease;
+	width:165px;
+	padding:30px 5px 30px 5px;
+	transition:all 0.2s ease;
 	font-size:18px;
 	border-radius: 0 5px 5px 0;
-	border: 1px rgba(200,200,200,.9) solid;
 	border-left:0;
+	transform:translateX(-100px);
 }
 
 #nav li:nth-child(2) a{
-	background: url(icons/productos.png) no-repeat 5% center, rgba(100,100,100,0.8);
+	background: url(icons/productos0.png) no-repeat 80% center, rgba(142, 175, 229,0.7);
 }
 
 #nav li:nth-child(3) a{
-	background: url(icons/nosotros.png) no-repeat 5% center, rgba(100,100,100,0.7);
+	background: url(icons/nosotros0.png) no-repeat 80% center, rgba(142, 175, 229,0.6);
 }
 
 #nav li:nth-child(4) a{
-	background: url(icons/contacto.png) no-repeat 5% center, rgba(100,100,100,0.6);
+	background: url(icons/contacto0.png) no-repeat 80% center, rgba(142, 175, 229,0.5);
 }
 
 #nav li:nth-child(5) a{
-	background: url(icons/mapa.png) no-repeat 5% center, rgba(100,100,100,0.5);
+	background: url(icons/mapa0.png) no-repeat 80% center, rgba(142, 175, 229,0.4);
+}
+
+#nav li:nth-child(1) .active, #nav li:nth-child(1) a:hover{
+	background: url(icons/home1.png) no-repeat 80% center;
+	background-color: rgba(142, 175, 240,1);
+}
+
+#nav li:nth-child(2) .active, #nav li:nth-child(2) a:hover{
+	background: url(icons/productos1.png) no-repeat 80% center;
+	background-color: rgba(142, 175, 240,1);
+}
+
+#nav li:nth-child(3) .active, #nav li:nth-child(3) a:hover{
+	background: url(icons/nosotros1.png) no-repeat 80% center;
+	background-color: rgba(142, 175, 240,1);
+}
+
+#nav li:nth-child(4) .active, #nav li:nth-child(4) a:hover{
+	background: url(icons/contacto1.png) no-repeat 80% center;
+	background-color: rgba(142, 175, 240,1);
+}
+
+#nav li:nth-child(5) .active, #nav li:nth-child(5) a:hover{
+	background: url(icons/mapa1.png) no-repeat 80% center;
+	background-color: rgba(142, 175, 240,1);
 }
 
 
 #nav li a:hover{
-	background-color: rgba(180,180,180,0.7);
+	transform:translateX(0px);
 }
 
 
 #nav .active{
-	background-color: rgba(180,180,180,0.7) !important;
+	background-color: rgba(142, 175, 240,1) !important;
 }
 
 
@@ -116,65 +142,68 @@ Productos
 	margin-left:7%;
 }
 */
-.productos h2{
-	margin:0 auto;
-	padding: 1%;
-	box-sizing:border-box;
-	text-align:center;
-	background-color: rgba(234, 234, 234,.7);
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
-	box-shadow: 0 0 6px rgba(0,0,0,.3);
-	width: 70%;
-	border-radius: 5px 5px 0 0;
-}
+
+
 
 .productos{
 	margin-top: 3%;
 	margin-bottom: 4%;
+
 }
 
 .productos ul {
-	margin:0 auto;
-	background-color: rgba(247, 247, 247,.9);
-	top: 30%;
-	text-align:center;
-	width: 70%;
-	box-shadow: 0 0 8px rgba(0,0,0,.5) inset;
-	box-shadow: 0 0 6px rgba(0,0,0,.3);
-	position:relative;
-	z-index:0;
 	padding:0;
-	border-radius:0 0 5px 5px;
+	padding-left:5%;
+	padding-right:5%;
+	text-align:center;
 }
 
 .productos li{
 	display:inline-block;
-	margin: 2%;
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	margin: 2% .75% 1% .75%;
 	width:200px;
 	overflow: hidden;
 	position:relative;
+	transition: all 0.3s;
+	border-radius:5px;
+	border:1px rgba(142, 175, 229, .3) solid;
+	
+}
+
+.productos li:hover{
+	border:1px rgba(142, 175, 229, 1) solid;
 }
 
 .overlay{
 	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-
-	background: rgba(0,0,0,0.5);
+	right: 0; left: 0;
+	top: 46px;
+	bottom:84px;
+	background-color:rgba(150,150,150,.5);
 	color: #fff;
 	overflow: hidden;
 	text-align: center;
+	line-height:150px;
 	width: 100%; 
-	transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+	opacity:0;
+	transition: all 0.2s;
+}
+
+.overlay p{
+	font-weight:bold;
+	transition:all .2s ease;
+}
+
+.overlay:hover p{
+	text-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+
+.overlay:hover{
+	background-color:rgba(50 ,100,150,.5);
 }
 
 .productos li:hover .overlay{
-	top: 0;
-}
-
-.overlay{
-	top: 100%;
-	bottom:40px;
+	opacity:1;
 }
 
 .productos li img{
@@ -192,32 +221,50 @@ Productos
 }
 
 .precio{
-	width: 40%;
+	width: 100%;
 	height:40px;
-	box-shadow: 0 0 6px rgba(0,0,0,.2) inset;
+	font-weight:bold;
+	color:#80dd82;
+	background-color:white;
+	position:relative;
+	z-index:-1;
 }
 
+
 .no-close .ui-dialog-titlebar-close {
-  display: none;
+	display: none;
 }
 
 
 .comprar{
-	width: 60%;
-	color: black;
+	width: 100%;
+	color: white;
 	height:40px;
-	background-color: #d9e0c6;
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	background-color: #80d69d;
 	font-weight:bold;
 }
 
 .comprar:hover{
-	background-color: #d9efc6;
+	background-color: #80f69d;
 }
 
 .nombre{
-	height:40px;
-	padding:5px;
+	font-size:15px;
+	padding:14px 5px 14px 5px;
+	color:rgb(75,75,75);
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	margin:0;
+	background-color:white;
+	transition:all .2s ease;
+	z-index: -1;
+	position:relative;
+}
+
+.productos li:hover .nombre{
+	color:white;
+	background-color:rgb(142, 175, 229);
 }
 
 .ribbon{
@@ -236,16 +283,108 @@ Productos
 	
 }
 
-#tmini img{
-	text-align:center;
-	margin:0 auto;
-	height:300px;
+/*********************************
+Modal
+*********************************/
+
+.noTitle .ui-dialog-titlebar, .noTitle .ui-dialog-buttonpane {display:none}
+
+#tmini{
+	padding:0;
 	overflow:hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
+#tmini>div{
+	width:50%;
+	float:left;
+	height:450px;
+	box-sizing:border-box;
+	display:inline-block;
+	padding:0;
+	margin:0;
+}
+#tmini>div:nth-child(1){
+	line-height:445px;
+	//background-color:rgba(150,150,150,.2);
+	background-color:white;
+}
+
+#tmini #titleBar{
+	width:100%;
+	max-height:20%;
+	line-height:20px;
+	vertical-align:middle;
+	background-color:rgb(142, 175, 229);
+}
+
+#tmini h3{
+	display:inline-block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding-left:15px;
+	white-space: nowrap;
+	text-align:center;
+	font-size:20px;
+	color:white;
+	width:90%;
+}
+
+#tmini img{
+	display: inline-block;
+	margin:0;
+	width:100%;
+	padding:0px;
+	vertical-align:middle;
+	box-sizing:border-box;
+}
+
+#tmini #media object{
+	display: inline-block;
+	margin:0;
+	width:100%;
+	padding:0px;
+	vertical-align:middle;
+	box-sizing:border-box;
+}
+
+#tmini>div>p{
+	margin:0;
+	height:65%;
+	display:inline-block;
+	white-space:pre-wrap;
+	padding:10px;
+	padding-top:10px;
+	overflow-y:scroll;
+}
+
+#tmini #botones{
+	width:100%;
+	height:15%;
+	overflow:hidden;
+	text-align:center;
+	box-sizing:border-box;
+}
+
+#tmini #botones a{
+	background-color:#80d69d;
+	color: white;
+	width:40%;
+	height:100%;
+	display:inline-block;
+	font-weight:bold;
+	padding:15px 0 15px 0;
+}
+
+#tmini #botones p{
+	margin:0;
+	padding:15px 0 15px 0;
+	background-color:white;
+	display:inline-block;
+	color: #80dd82;
+	font-weight:bold;
+	height:100%;
+	width:60%;
+}
 
 /*********************************
 Filtro productos
@@ -259,9 +398,8 @@ Filtro productos
 	overflow: hidden;
 	padding:0;
 	border-radius: 5px;
-	border:5px solid rgba(200, 200, 200,.5);
 	box-sizing:border-box;
-	box-shadow: 0 0 6px rgba(0,0,0,.3);
+	border:1px rgb(142, 175, 229) solid;
 }
 
 #buscar li{
@@ -276,24 +414,26 @@ Filtro productos
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-	box-shadow: 0 0 3px rgba(0,0,0,.5) inset;
 	transition:all .3s ease;
 }
 
 #buscar li a:hover {
     background-color: rgba(255, 255, 255,.7);
-	box-shadow: 0 0 6px rgba(0,0,0,.5) inset;
+	color:black;
+	box-shadow: 0 0 6px rgba(0,0,0,.1) inset;
 }
 
 
-
+/*********************************
+Seccion nosotros
+*********************************/
 
 .foto{
 	border-radius: 50%;
 	width:17%;
 }
 
-#nosotros hr{
+hr{
 	border: 0; 
 	height: 1px; 
 	margin: 3% 0 3% 0;
@@ -309,22 +449,24 @@ Filtro productos
 }
 
 #quotes{
-	width:75%;
+	width:95%;
 	margin: 0 auto;
 }
 
 #quotes>div{
 	width:100%;
-	box-shadow: 0 0 6px rgba(0,0,0,.5) inset;
+	background-color:rgba(142, 175, 229,.1);
+	border:1px rgba(142, 175, 229,.4) solid;
 	padding: 15px;
 	box-sizing:border-box;
+	border-radius:15px;
 }
 
 blockquote{
   display:inline-block;
   vertical-align:top;
   background: #fff;
-  width: 50%;
+  width: 65%;
   padding: 15px 20px 15px 45px;
   position: relative;
   font-family: Georgia, serif;
@@ -334,7 +476,6 @@ blockquote{
   text-align: justify;
   border-left: 15px solid #8eafe5;
   border-right: 2px solid #8eafe5;
-  box-shadow: 2px 2px 15px #ccc;
 }
 
 blockquote::before{
@@ -372,37 +513,42 @@ Ubicacion
 Estilo containers
 *********************************/
 
-
-#mapa h2, #nosotros h2, #contacto h2, #gracias h2{
-	margin:0 auto;
-	padding: 1%;
-	box-sizing:border-box;
-	text-align:center;
-	background-color: rgba(234, 234, 234,.7);
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
-	box-shadow: 0 0 6px rgba(0,0,0,.3);
-	width: 70%;
-	border-radius: 5px 5px 0 0;
-}
-/*
-#mapa, #nosotros, #contacto{
-	margin-top: 3%;
-}
-*/
-
-#mapa>div,#nosotros>div, #contacto form, #gracias div{
+#container{
 	margin:0 auto;
 	background-color: rgba(247, 247, 247,.9);
 	top: 30%;
 	box-sizing:border-box;
 	text-align:center;
-	width: 70%;
-	box-shadow: 0 0 8px rgba(0,0,0,.5) inset;
-	box-shadow: 0 0 6px rgba(0,0,0,.3);
+	width: 80%;
 	position:relative;
 	z-index:0;
-	padding:15px;
 	border-radius:0 0 5px 5px;
+	
+}
+
+#mapa h2, #nosotros h2, #contacto h2, #gracias h2, .productos h2{
+	margin:0 auto;
+	padding: 1.5%;
+	font-size:25px;
+	box-sizing:border-box;
+	text-align:center;
+	background-color: rgba(142, 175, 229,1);
+	color:white;
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+}
+
+#mapa>div,#nosotros>div, #contacto>div, #gracias div, .productos ul{
+	margin:0 auto;
+	top: 30%;
+	border:1px rgba(142, 175, 229,.3) solid;
+	border-bottom:5px rgb(142, 175, 229) solid;
+	border-radius:0 0 5px 5px;
+
+}
+
+#mapa>div{
+	padding:15px;
 }
 
 #nosotros p{
@@ -413,12 +559,16 @@ Estilo containers
 	padding:30px;
 }
 
-#mapa div, #contacto, #nosotros div, #gracias div{
+#mapa div, #nosotros div, #gracias div{
 	margin-bottom: 5%;
 }
 
-#gracias div{
-	padding:20px 0 0 0;
+#contacto>div{
+	margin-bottom: 8%;
+}
+
+#gracias div p{
+	padding:20px 0 20px 0;
 }
 
 #gracias a{
@@ -428,8 +578,12 @@ Estilo containers
 	box-sizing:border-box;
 	width:100%;
 	background-color:rgba(165, 96, 96,0.8);
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.2) inset;
-	border-radius:0 0 5px 5px;
+	font-weight:bold;
+	transition:all .2s ease;
+}
+
+#gracias a:hover{
+	background-color:rgba(190, 96, 96,0.8);
 }
 
 
@@ -441,48 +595,54 @@ Footer
 #footer{
 	text-align:center;
 	font-size: 14px;
-	color: black;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	text-shadow: 1px 1px 2px #111;
+	color: grey;
 	position:fixed;
 	bottom:0px;
 	width:100%;
 	clear: both;
 	z-index:0;
-	background: rgba(200,200,200,0.5);
-	border-top: 2px solid rgb(133, 174, 178);
+	background: rgba(240,240,240,0.9);
+	border:1px rgba(142, 175, 229,.4) solid;
 	box-sizing:border-box;
+	padding:0;
+}
+
+#footer:hover{
+	color:black;
 }
 
 #footer div{
-	width:70%;
+	width:80%;
 	margin:0 auto;
-	padding: 0 15px 0 15px;
+	padding: 0;
 	box-sizing:border-box;
+	
 }
 
 #footer p{
 	display:inline-block;
+	padding:0;
 	width:49%;
 	box-sizing:border-box;
+	margin-bottom:5px;
 }
 
 #footer p:nth-child(1){
-	line-height:20px;
+	line-height:17px;
 	text-align:left;
 }
 
 #footer p:nth-child(2){
-	margin-bottom:10px;
 	font-size:10px;
 	text-align:right;
 }
 
 #footer .fb, #footer .mail{
 	vertical-align:bottom;
-	width:20px;
-	height:20px;
+	width:17px;
+	height:17px;
+	padding:0;
+	margin:0;
 	display:inline-block;
 }
 

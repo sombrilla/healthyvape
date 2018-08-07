@@ -335,17 +335,19 @@ button.ui-button::-moz-focus-inner {
 	top: 0;
 	left: 0;
 	outline: 0;
-	background: rgba(247, 247, 247,.9) !important;
-	box-shadow: 0 0 8px rgba(0,0,0,.5);
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	background: rgba(247, 247, 247,1) !important;
+	border:1px rgba(142, 175, 229,.4) solid;
+	border-bottom:5px rgb(142, 175, 229) solid;
+	border-top:5px rgb(142, 175, 229) solid;
 	border-radius:5px;
+	overflow:hidden;
 }
 .ui-dialog .ui-dialog-titlebar {
 	padding: 1em 1em;
 	position: relative;
 	background-color: rgba(234, 234, 234,.3);
-	box-shadow: 0 0 6px rgba(0,0,0,.2) inset;
 	border:none;
+	box-shadow:0 3px 5px rgba(0,0,0,.1);
 	border-radius:5px 5px 0 0;
 }
 .ui-dialog .ui-dialog-title {
@@ -358,32 +360,30 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-dialog .ui-dialog-titlebar-close {
 	position: absolute;
-	right: -1px;
+	right: -3px;
 	top: 0;
 	width: 50px;
 	height: 100%;
 	border-radius:0 5px 0 0;
 	border:0;
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 6px rgba(0,0,0,.1) inset;
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
 	border: 0;
-	padding: .5em 1em;
 	background: none;
 	overflow: auto;
 	text-align:left;
-	white-space:pre-line;
-	box-shadow: 0 10px 10px rgba(0,0,0,.1) inset;
+	box-sizing:border-box;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
 	text-align: center;
-	border-width: 1px 0 0 0;
 	overflow:hidden;
 	background-image: none;
 	width:100%;
 	border-radius:0 0 5px 5px;
+	box-shadow:0 -3px 5px rgba(0,0,0,.1);
 }
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
 	width:100%;
@@ -397,7 +397,6 @@ button.ui-button::-moz-focus-inner {
 	border:none;
 	width:50%;
 	height:50px;
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
 	font-weight:bold;
 }
 .ui-dialog .ui-dialog-buttonpane button:hover {
@@ -407,14 +406,14 @@ button.ui-button::-moz-focus-inner {
 	display:inline-block;
 	cursor: pointer;
 	padding:15px;
+	color: #80dd82;
+	font-weight:bold;
 	box-sizing:border-box;
 	background:white;
-	box-shadow: 0 0 6px rgba(0,0,0,.3) inset;
 	border-radius:0;
 	width:50%;
 	vertical-align:middle;
 	height:50px;
-	
 }
 .ui-dialog .ui-resizable-n {
 	height: 2px;
@@ -479,7 +478,6 @@ button.ui-button::-moz-focus-inner {
 	
 }
 .ui-widget-content {
-	border: 1px solid #dddddd;
 	background: #ffffff;
 	color: #333333;
 }
